@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #E5E5E5;
+  }
+  
+  .logo {
+    position: absolute;
+    left: 40px;
+    top: 40px;
+  }
+  
+  .texto-entrada {
+    width: 50%;
+    position: absolute;
+    left: 140px;
+    top: 130px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    color: #0A3871; 
+    border: none;
+    background-color: #E5E5E5;
+    resize: none;
+  }
+  
+  .texto-entrada:focus {
+    outline: none;
+  }
+  
+  .texto-entrada::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .aclaracion {
+    position: absolute;
+    width: 400px;
+    height: 40px;
+    left: 140px;
+    top: 460px;
+    font-size: 12px;
+  }
+  
+  .aclaracion::before {
+    content: url('https://api.iconify.design/bi/exclamation-circle-fill.svg');
+    vertical-align: middle;
+    margin: 5px;
+  }
+  
+  .boton-encriptar,
+  .boton-desencriptar,
+  #boton-copiar {
+    position: absolute;
+    width: 250px;
+    height: 40px;
+    font-size: 12px;
+    border-radius: 14px;
+    color: #0A3871;
+  }
+  
+  .boton-encriptar {
+    left: 140px;
+    top: 500px;
+    background: #0A3871;
+    color: #FFFFFF;
+  }
+  
+  .boton-desencriptar {
+    left: 400px;
+    top: 500px;
+    background: #D8DFE8;
+  }
+  
+  .boton-encriptar:hover,
+  .boton-desencriptar:hover,
+  #boton-copiar:hover {
+    cursor: pointer;
+  }
+  
+  .boton-encriptar:active,
+  .boton-desencriptar:active,
+  #boton-copiar:active {
+    background-color: lightblue;
+    color: black;
+    font-weight: bold;
+  }
+  
+  #panelsintexto,
+  #panelsalidaok,
+  #panelsalidaerror {
+    position: absolute;
+    width: 25%;
+    height: 85%;
+    left: 900px;
+    top: 40px;
+    background-color: white;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #munieco {
+    width: 70%;
+  }
+  
+  #no-mensaje {
+    font-weight: 700;
+    font-size: 22px;
+    text-align: center; 
+    color: #343A40;
+  }
+  
+  #indicacion {
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #495057;
+    margin-top: 10px;
+  }
+  
+  #texto-salida {
+    height: 70%;
+    font-size: 22px;
+    color: #0A3871; 
+    font-family: 'Inter', sans-serif;    
+    border: none;
+    resize: none;
+  }
+  
+  #texto-salida:focus {
+    outline: none;
+  }
+  
+  #texto-salida::-webkit-scrollbar {
+    display: none;
+  }
+  
+  #boton-copiar {
+    left: 50px;
+    top: 470px;
+    background: #D8DFE8;
+  }
+  
+  #panelsalidaerror {
+    visibility: hidden;
+  }
+  
+  #alerta {
+    width: 50%;
+  }
+  
+  #advertencia,
+  #otravez {
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #495057;
+    margin-top: 10px;
+  }
+  
+  .pie {
+    font-size: small;
+    margin-top: 580px;
+    text-align: center;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .logo {
+      left: 0;
+    }
+  
+    .contenido {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .texto-entrada {
+      width: 78%;
+      left: 40px;
+      right: 40px;
+      top: 140px;
+    }
+    
+    .aclaracion {
+      left: 40px;
+      font-size: 14px;
+    }
+  
+    .boton-encriptar {
+      width: 290px;
+      left: 40px;
+    }
+  
+    .boton-desencriptar {
+      width: 290px;
+      left: 340px;
+    }
+  
+    #indicacion {
+      padding: 10px;
+      margin-top: 15px;
+    }
+    
+    #panelsintexto,
+    #panelsalidaok,
+    #panelsalidaerror {
+      width: 78%;
+      height: 200px;
+      left: 40px;
+      top: 600px;
+    }
+    
+    #munieco {
+      display: none;
+    }
+  
+    #texto-salida {  
+      width: 80%;
+      position: relative;     
+    }
+  
+    #boton-copiar {
+      width: 80%;
+      height: 40px;
+      left: 60px;
+      top: 150px;
+      border-radius: 24px;
+    }
+    
+    #alerta {
+      width: 10%;
+    }
+    
+    #advertencia,
+    #otravez {
+      margin-top: 5px;
+      padding: 10px;
+    }
+    
+    .pie {
+      width: 78%;
+      margin-left: 40px;
+      margin-top: 830px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .texto-entrada {
+      margin: 5 auto;
+      font-size: 26px;
+    }
+  
+    .boton-encriptar,
+    .boton-desencriptar {
+      width: 75%;
+      position: relative;
+      display: block;
+      margin: 5px;
+      left: 40px;
+    }
+  
+    #panelsintexto,
+    #panelsalidaok,
+    #panelsalidaerror {
+      margin-top: 10px;
+    }
+  
+    #boton-copiar {
+      width: 80%;
+      height: 40px;
+      left: 30px;
+      top: 150px;
+      border-radius: 24px;
+    }
+  
+    .pie {
+      margin-top: 750px;
+    }
+  }
+  
